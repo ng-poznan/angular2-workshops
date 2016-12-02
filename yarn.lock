@@ -15,7 +15,7 @@
   version "1.0.8"
   resolved "https://registry.yarnpkg.com/@angular-cli/base-href-webpack/-/base-href-webpack-1.0.8.tgz#3ff5880d3b3fd4097d714c88a8762a05f6715ce0"
 
-"@angular/common@2.2.1":
+"@angular/common@2.2.1", "@angular/common@^2.0.2":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-2.2.1.tgz#ad7996a865b7b11fc315363827f2414a48c6589c"
 
@@ -27,11 +27,11 @@
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
 
-"@angular/compiler@2.2.1":
+"@angular/compiler@2.2.1", "@angular/compiler@^2.0.2":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-2.2.1.tgz#16e7faf588cf9121a0f6c16d0bae2830f4cafdc1"
 
-"@angular/core@2.2.1":
+"@angular/core@2.2.1", "@angular/core@^2.0.2":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-2.2.1.tgz#86fdc34a370a4fcfe84ed9de4b3c43548612919c"
 
@@ -39,17 +39,23 @@
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-2.2.1.tgz#0e7154acc5127c583b4b52c59eac45d672c29da4"
 
-"@angular/http@2.2.1":
+"@angular/http@2.2.1", "@angular/http@^2.0.2":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@angular/http/-/http-2.2.1.tgz#1626884a6c5f0cc602ce9d81e7420fcc02db3353"
 
-"@angular/platform-browser-dynamic@2.2.1":
+"@angular/platform-browser-dynamic@2.2.1", "@angular/platform-browser-dynamic@^2.0.2":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-2.2.1.tgz#561d32982fee4b68b474ba474c7f3c4d94bfeb6c"
 
-"@angular/platform-browser@2.2.1":
+"@angular/platform-browser@2.2.1", "@angular/platform-browser@^2.0.2":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@angular/platform-browser/-/platform-browser-2.2.1.tgz#d51b36260089f3054e745efad05993523d5a5293"
+
+"@angular/platform-server@^2.0.2":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@angular/platform-server/-/platform-server-2.2.4.tgz#b57d42e86ccf612dcaa39909b0ef5bf20e3856fb"
+  dependencies:
+    parse5 "^2.2.1"
 
 "@angular/router@3.2.1":
   version "3.2.1"
@@ -60,6 +66,21 @@
   resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-0.3.0.tgz#98cdeb5c38d145b187c0ad0397a8d98b217f33f2"
   dependencies:
     tsickle "^0.1.7"
+
+"@briisk/http-wrapper@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@briisk/http-wrapper/-/http-wrapper-0.1.7.tgz#3cabc0b30e1d7ca38ac78c37fe74e40ca48d04d1"
+  dependencies:
+    "@angular/common" "^2.0.2"
+    "@angular/compiler" "^2.0.2"
+    "@angular/core" "^2.0.2"
+    "@angular/http" "^2.0.2"
+    "@angular/platform-browser" "^2.0.2"
+    "@angular/platform-browser-dynamic" "^2.0.2"
+    "@angular/platform-server" "^2.0.2"
+    core-js "^2.4.0"
+    rxjs "5.0.0-beta.12"
+    zone.js "~0.6.23"
 
 "@ngtools/webpack@^1.0.0":
   version "1.1.7"
@@ -4067,7 +4088,7 @@ parse-json@^2.2.0:
   dependencies:
     error-ex "^1.2.0"
 
-parse5@^2.1.5:
+parse5@^2.1.5, parse5@^2.2.1:
   version "2.2.3"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-2.2.3.tgz#0c4fc41c1000c5e6b93d48b03f8083837834e9f6"
 
@@ -6133,6 +6154,6 @@ yeast@0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/yeast/-/yeast-0.1.2.tgz#008e06d8094320c372dbc2f8ed76a0ca6c8ac419"
 
-zone.js@^0.6.23:
+zone.js@^0.6.23, zone.js@~0.6.23:
   version "0.6.26"
   resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.6.26.tgz#067c13b8b80223a89b62e9dc82680f09762c4636"
