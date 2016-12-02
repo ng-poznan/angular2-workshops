@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpWrapper } from '@briisk/http-wrapper';
-import 'rxjs/operator/map';
+import { Observable } from 'rxjs/';
 
 @Component({
   selector: 'ds-root',
@@ -8,18 +8,14 @@ import 'rxjs/operator/map';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public luke: any;
+  public luke$: Observable<any>;
 
-  constructor(
-    private http: HttpWrapper
-  ) {
+  constructor(private http: HttpWrapper) {
     this.http.setBaseUrl('http://swapi.co/api/');
     this.http.setHeader('Content-Type', 'application/vnd.api+json');
   }
 
   ngOnInit() {
-    this.http.get('people/1/').subscribe((data) => {
-      this.luke = data;
-    });
+    this.luke$ = this.http.get('people/1/');
   }
 }
