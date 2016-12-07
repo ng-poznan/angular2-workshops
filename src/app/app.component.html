@@ -1,4 +1,4 @@
 <h1>
-  {{ luke?.name }}
+  {{ (luke$ | async)?.name }}
 </h1>
 <router-outlet></router-outlet>
