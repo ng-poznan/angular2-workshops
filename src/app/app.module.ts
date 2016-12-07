@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpWrapperModule } from '@briisk/http-wrapper';
-import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -16,8 +15,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     AppRoutingModule,
-    HttpWrapperModule,
-    CommonModule
+    HttpWrapperModule
   ],
   providers: [],
   bootstrap: [AppComponent]
