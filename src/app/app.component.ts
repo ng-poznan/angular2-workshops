@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpWrapper } from '@briisk/http-wrapper';
-import { Observable } from 'rxjs/';
+import { Observable } from 'rxjs/Observable';
+import { Response } from '@angular/http';
 
 @Component({
   selector: 'ds-root',
@@ -8,7 +9,7 @@ import { Observable } from 'rxjs/';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public luke$: Observable<any>;
+  public luke$: Observable<Response>;
 
   constructor(private http: HttpWrapper) {
     this.http.setBaseUrl('http://swapi.co/api/');
