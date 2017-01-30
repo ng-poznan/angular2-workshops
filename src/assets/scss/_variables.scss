@@ -1,0 +1,29 @@
+$site-background-color: #000;
+$site-font-color: #c5c5c5;
+$white: #fff;
+$site-font-size: 14px;
+$transition-time: 500ms;
+
+// MENU
+
+$menu-element-border: $site-font-color;
+$menu-link-color: $site-font-color;
+$menu-link-hover-background: $site-font-color;
+$menu-link-hover-color: $site-background-color;
+
+// PANEL
+
+$panel-header-background: rgba(245, 245, 245, .2);
+$panel-background: rgba(255, 255, 255, .2);
+
+// TABLE
+
+$table-stripe: rgba(255, 255, 255, .2);
+
+// FORMS
+
+$form-control-background: rgba(255, 255, 255, .1);
+
+// IMG
+
+$img-thumbnail-background: rgba(255, 255, 255, .2);

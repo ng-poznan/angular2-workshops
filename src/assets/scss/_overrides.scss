@@ -1,0 +1,66 @@
+.container-fluid {
+  min-width: 960px;
+}
+
+.table-striped > tbody > tr {
+  &:nth-of-type(odd) {
+    background-color: $table-stripe;
+  }
+}
+
+.btn {
+  margin-right: 10px;
+  transition: background-color $transition-time ease-in-out, border-color $transition-time ease-in-out;
+
+  &:hover {
+    transition: background-color $transition-time ease-in-out, border-color $transition-time ease-in-out;
+  }
+}
+
+.panel {
+  background-color: $panel-background;
+
+  .panel-title {
+    color: $site-font-color;
+  }
+
+  .panel-heading {
+    background-color: $panel-header-background;
+  }
+}
+
+.form-control {
+  background-color: $form-control-background;
+  color: $site-font-color;
+}
+
+.page-header {
+  margin-top: 20px;
+
+  small {
+    padding-left: 10px;
+  }
+}
+
+.thead {
+  th {
+    font-size: 16px;
+    font-weight: bold;
+
+    &.actions {
+      width: 160px;
+    }
+  }
+}
+
+.table {
+  .tbody {
+    td {
+      line-height: 34px;
+    }
+  }
+}
+
+.img-thumbnail {
+  background-color: $img-thumbnail-background;
+}
