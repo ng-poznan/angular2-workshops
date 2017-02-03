@@ -18,6 +18,7 @@
       "prefix": "ds",
       "mobile": false,
       "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
         "styles.scss"
       ],
       "scripts": [],
