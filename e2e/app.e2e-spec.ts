@@ -9,6 +9,6 @@ describe('death-star App', function() {
 
   it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('ds works!');
+    expect(page.getParagraphText()).toEqual('Death Star');
   });
 });
