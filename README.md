@@ -2,6 +2,13 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
+## Installation
+- Install `nvm`, [nvm](https://github.com/creationix/nvm)
+- Install `node` using `nvm`.
+`nvm install 6.9.4`
+`nvm use 6.9.4`
+- Install `yarn`, [yarnpkg](https://yarnpkg.com/docs/install)
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
