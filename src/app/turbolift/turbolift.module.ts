@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { TurboliftRoutingModule } from './turbolift-routing.module';
 import { TurboliftComponent } from './turbolift.component';
 import { MessHallComponent } from './mess-hall/mess-hall.component';
+import { RecRoomComponent } from './rec-room/rec-room.component';
 
 @NgModule({
   imports: [
@@ -13,7 +14,7 @@ import { MessHallComponent } from './mess-hall/mess-hall.component';
     CommandCenterModule,
     HangarBayModule
   ],
-  declarations: [TurboliftComponent, MessHallComponent],
+  declarations: [TurboliftComponent, MessHallComponent, RecRoomComponent],
   exports: [TurboliftComponent]
 })
 export class TurboliftModule { }

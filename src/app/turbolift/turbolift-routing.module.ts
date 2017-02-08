@@ -1,3 +1,4 @@
+import { RecRoomComponent } from './rec-room/rec-room.component';
 import { MessHallComponent } from './mess-hall/mess-hall.component';
 import { HangarBayComponent } from './hangar-bay/hangar-bay.component';
 import { CommandCenterComponent } from './command-center/command-center.component';
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'mess',
     component: MessHallComponent
+  },
+  {
+    path: 'rec',
+    component: RecRoomComponent
   }
 ];
 
