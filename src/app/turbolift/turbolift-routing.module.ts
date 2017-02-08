@@ -8,7 +8,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: 'center',
-    component: CommandCenterComponent
+    loadChildren: 'app/turbolift/command-center/command-center.module#CommandCenterModule'
   },
   {
     path: 'hangar',

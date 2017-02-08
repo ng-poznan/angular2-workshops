@@ -12,7 +12,7 @@ import { TurboliftComponent } from './turbolift.component';
     '(click)': 'onClick()'
   }
 })
-export class RouterLinkStubDirective {
+class RouterLinkStubDirective {
   @Input('routerLink') linkParams: any;
   navigatedTo: any = null;
 
@@ -25,7 +25,7 @@ export class RouterLinkStubDirective {
   selector: 'router-outlet',
   template: ''
 })
-export class RouterOutletStubComponent {}
+class RouterOutletStubComponent {}
 
 describe('TurboliftComponent', () => {
   let component: TurboliftComponent;
