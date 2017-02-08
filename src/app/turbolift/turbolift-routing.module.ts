@@ -1,3 +1,4 @@
+import { MessHallComponent } from './mess-hall/mess-hall.component';
 import { HangarBayComponent } from './hangar-bay/hangar-bay.component';
 import { CommandCenterComponent } from './command-center/command-center.component';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'hangar',
     component: HangarBayComponent
+  },
+  {
+    path: 'mess',
+    component: MessHallComponent
   }
 ];
 
