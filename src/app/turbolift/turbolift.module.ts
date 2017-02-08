@@ -1,3 +1,4 @@
+import { CommandCenterModule } from './command-center/command-center.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TurboliftRoutingModule } from './turbolift-routing.module';
@@ -6,7 +7,8 @@ import { TurboliftComponent } from './turbolift.component';
 @NgModule({
   imports: [
     CommonModule,
-    TurboliftRoutingModule
+    TurboliftRoutingModule,
+    CommandCenterModule
   ],
   declarations: [TurboliftComponent],
   exports: [TurboliftComponent]
