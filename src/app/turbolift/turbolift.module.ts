@@ -1,3 +1,4 @@
+import { HangarBayModule } from './hangar-bay/hangar-bay.module';
 import { CommandCenterModule } from './command-center/command-center.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -8,7 +9,8 @@ import { TurboliftComponent } from './turbolift.component';
   imports: [
     CommonModule,
     TurboliftRoutingModule,
-    CommandCenterModule
+    CommandCenterModule,
+    HangarBayModule
   ],
   declarations: [TurboliftComponent],
   exports: [TurboliftComponent]
