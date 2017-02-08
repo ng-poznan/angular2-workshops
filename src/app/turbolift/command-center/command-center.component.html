@@ -1,7 +1,7 @@
 <h1>
   Alarm is one?
   <button class="btn"
-    [ngClass]='{"btn-danger": security.alarmOn, "btn-primary": !security.alarmOn}'>{{security.alarmOn}}
+    [ngClass]='{"btn-danger": security.alarmOn, "btn-primary": !security.alarmOn}'>{{security.alarmOn | yesNo}}
   </button>
 </h1>
 <section class="details">

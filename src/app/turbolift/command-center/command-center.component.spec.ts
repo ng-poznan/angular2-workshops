@@ -1,3 +1,4 @@
+import { YesNoPipe } from './yes-no/yes-no.pipe';
 import { SecurityService } from './../../core/security/security.service';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
@@ -14,7 +15,7 @@ describe('CommandCenterComponent', () => {
     const mockedSecurityService = {};
 
     TestBed.configureTestingModule({
-      declarations: [ CommandCenterComponent ],
+      declarations: [ CommandCenterComponent, YesNoPipe ],
       providers: [{
         provide: SecurityService,
         useValue: mockedSecurityService
