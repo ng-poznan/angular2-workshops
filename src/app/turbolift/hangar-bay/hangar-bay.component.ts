@@ -1,3 +1,4 @@
+import { SecurityService } from './../../core/security/security.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HangarBayComponent implements OnInit {
 
-  constructor() { }
+  constructor(private security: SecurityService) { }
+
+  public setAlarm() {
+    this.security.setAlarm(!this.security.alarmOn);
+  }
 
   ngOnInit() {
   }

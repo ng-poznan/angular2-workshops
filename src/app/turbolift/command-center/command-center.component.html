@@ -1,3 +1,9 @@
+<h1>
+  Alarm is one?
+  <button class="btn"
+    [ngClass]='{"btn-danger": security.alarmOn, "btn-primary": !security.alarmOn}'>{{security.alarmOn}}
+  </button>
+</h1>
 <section class="details">
   <header class="page-header">
     <div class="row">

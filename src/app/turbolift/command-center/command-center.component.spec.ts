@@ -1,3 +1,4 @@
+import { SecurityService } from './../../core/security/security.service';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -10,8 +11,14 @@ describe('CommandCenterComponent', () => {
   let fixture: ComponentFixture<CommandCenterComponent>;
 
   beforeEach(async(() => {
+    const mockedSecurityService = {};
+
     TestBed.configureTestingModule({
-      declarations: [ CommandCenterComponent ]
+      declarations: [ CommandCenterComponent ],
+      providers: [{
+        provide: SecurityService,
+        useValue: mockedSecurityService
+      }]
     })
     .compileComponents();
   }));

@@ -1,3 +1,4 @@
+import { SecurityService } from './../../core/security/security.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommandCenterComponent implements OnInit {
 
-  constructor() { }
+    constructor(private security: SecurityService) { }
 
   ngOnInit() {
   }

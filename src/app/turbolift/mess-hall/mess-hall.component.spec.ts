@@ -1,3 +1,4 @@
+import { YodaComponent } from './../../shared/yoda/yoda.component';
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
@@ -11,7 +12,7 @@ describe('MessHallComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessHallComponent ]
+      declarations: [ MessHallComponent, YodaComponent ]
     })
     .compileComponents();
   }));
