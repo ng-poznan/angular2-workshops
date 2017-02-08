@@ -1,3 +1,4 @@
+import { TurboliftModule } from './turbolift/turbolift.module';
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async } from '@angular/core/testing';
@@ -8,7 +9,8 @@ describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [
-        RouterTestingModule
+        RouterTestingModule,
+        TurboliftModule
       ],
       declarations: [
         AppComponent

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-2">
+      <nav class="menu">
+        <header class="menu-header">Turbo Lift</header>
+        <ul class="menu-list">
+          <li class="menu-element"><a title="Mess Hall" class="menu-link" routerLink='center'>Command Center</a></li>
+          <li class="menu-element"><a title="Living quarters" class="menu-link" routerLink='hangar'>Hangar Bay</a></li>
+          <li class="menu-element"><a title="Recreation room" class="menu-link" routerLink='mess'>Mess Hall</a></li>
+          <li class="menu-element"><a title="Hangar" class="menu-link" routerLink='rec'>Recreation Room</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="col-xs-10">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12">
+            <header class="main-header">
+              <h1 class="text-center">Death Star</h1>
+            </header>
+            <router-outlet></router-outlet>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,3 +1,4 @@
+import { TurboliftModule } from './turbolift/turbolift.module';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -18,7 +19,8 @@ import { AppComponent } from './app.component';
     HttpModule,
     AppRoutingModule,
     CoreModule,
-    SharedModule
+    SharedModule,
+    TurboliftModule
   ],
   providers: [],
   bootstrap: [AppComponent]
