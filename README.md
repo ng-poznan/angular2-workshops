@@ -2,12 +2,15 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
 
+*From step ngModule 15 you need to update angular-cli to the version beta.30*
+
 ## Installation
 - Install `nvm`, [nvm](https://github.com/creationix/nvm)
 - Install `node` using `nvm`.
 `nvm install 6.9.4`
 `nvm use 6.9.4`
 - Install `yarn`, [yarnpkg](https://yarnpkg.com/docs/install)
+- install angular-cli. `npm i -g angular-cli` (for version beta.28.3) and `npm i -g @angular/cli` for the newest version.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
