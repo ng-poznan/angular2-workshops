@@ -1,6 +1,6 @@
 # Angular2Workshops
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.28.3.
+This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.30.
 
 ## Installation
 - Install `nvm`, [nvm](https://github.com/creationix/nvm)
@@ -8,6 +8,7 @@ This project was generated with [angular-cli](https://github.com/angular/angular
 `nvm install 6.9.4`
 `nvm use 6.9.4`
 - Install `yarn`, [yarnpkg](https://yarnpkg.com/en/docs/install)
+- install the angular-cli `npm i -g angular-cli` (version before beta.30) or `npm i -g @angular/cli` for the newest version.
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
