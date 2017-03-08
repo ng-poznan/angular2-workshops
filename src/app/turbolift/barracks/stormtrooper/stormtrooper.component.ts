@@ -6,8 +6,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./stormtrooper.component.scss']
 })
 export class StormtrooperComponent implements OnInit {
-  @Input() value: any;
-  @Output() saySomething = new EventEmitter<string>();
   public inHelmet = true;
 
   constructor() { }
