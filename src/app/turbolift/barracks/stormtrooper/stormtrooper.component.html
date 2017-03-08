@@ -1,2 +1,5 @@
-<img *ngIf="inHelmet" [src]="imagePath(value.inHelmet)"/>
-<img *ngIf="!inHelmet" [src]="imagePath(value.withoutHelmet)"/>
+<div *ngIf="value.withoutHelmet === 'jango.png'">
+    <ng-content></ng-content>
+    <img *ngIf="inHelmet" [src]="imagePath(value.inHelmet)" (mouseenter)="toggleHelmet()"/>
+    <img *ngIf="!inHelmet" [src]="imagePath(value.withoutHelmet)" (mouseleave)="toggleHelmet()"/>
+</div>
