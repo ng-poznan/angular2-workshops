@@ -6,6 +6,7 @@ import { TurboliftRoutingModule } from './turbolift-routing.module';
 import { TurboliftComponent } from './turbolift.component';
 import { MessHallComponent } from './mess-hall/mess-hall.component';
 import { RecRoomComponent } from './rec-room/rec-room.component';
+import { BarracksComponent } from './barracks/barracks.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,7 @@ import { RecRoomComponent } from './rec-room/rec-room.component';
     CommandCenterModule,
     HangarBayModule
   ],
-  declarations: [TurboliftComponent, MessHallComponent, RecRoomComponent],
+  declarations: [TurboliftComponent, MessHallComponent, RecRoomComponent, BarracksComponent],
   exports: [TurboliftComponent]
 })
 export class TurboliftModule { }
