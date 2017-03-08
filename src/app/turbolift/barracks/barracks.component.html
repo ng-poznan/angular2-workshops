@@ -1,3 +1,4 @@
-<p>
-  barracks works!
-</p>
+<p> {{ saidValue }} </p>
+<div *ngFor="let stormtrooper of stormtroopers">
+  <ds-stormtrooper [value]="stormtrooper" (saySomething)=onSaySomething($event)></ds-stormtrooper>
+</div>
