@@ -1,3 +1,4 @@
+import { BarracksComponent } from './barracks/barracks.component';
 import { RecRoomComponent } from './rec-room/rec-room.component';
 import { MessHallComponent } from './mess-hall/mess-hall.component';
 import { HangarBayComponent } from './hangar-bay/hangar-bay.component';
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: 'rec',
     component: RecRoomComponent
+  },
+  {
+    path: 'barracks',
+    component: BarracksComponent
   }
 ];
 
