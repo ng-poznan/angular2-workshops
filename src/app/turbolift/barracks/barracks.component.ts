@@ -36,7 +36,7 @@ export class BarracksComponent implements OnInit, AfterViewInit, AfterViewChecke
   }
 
   assignNewStormtrooper() {
-    this.index = this.index === stormtroopers.length ? 0 : this.index + 1;
+    this.index = this.index === stormtroopers.length - 1 ? 0 : this.index + 1;
     this.stormtrooper = stormtroopers[this.index];
   }
 
