@@ -9,6 +9,7 @@ import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChange
 export class StormtrooperComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, OnDestroy {
   @Input() value;
   public inHelmet = true;
+  public showedValue;
 
   constructor() { }
 
@@ -22,6 +23,7 @@ export class StormtrooperComponent implements OnInit, OnChanges, DoCheck, AfterC
   }
 
   ngOnChanges(changes: SimpleChanges) {
+    this.showedValue = changes['value'].currentValue.isJango ? changes['value'].currentValue : changes['value'].previousValue;
     console.log('Stormtrooper: OnChanges', changes);
   }
 
