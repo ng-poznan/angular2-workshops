@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges, OnChanges,
-  DoCheck, AfterContentInit, AfterContentChecked } from '@angular/core';
+  DoCheck, AfterContentInit, AfterContentChecked, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'ds-stormtrooper',
   templateUrl: './stormtrooper.component.html',
   styleUrls: ['./stormtrooper.component.scss']
 })
-export class StormtrooperComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked {
+export class StormtrooperComponent implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, OnDestroy {
   @Input() value;
   public inHelmet = true;
 
@@ -35,6 +35,10 @@ export class StormtrooperComponent implements OnInit, OnChanges, DoCheck, AfterC
 
   ngAfterContentChecked() {
     console.log('Stormtrooper: AfterContentChecked');
+  }
+
+  ngOnDestroy() {
+    console.log('Stormtrooper: OnDestroy');
   }
 
   imagePath(val = { withoutHelmet: ''}) {
