@@ -1,0 +1,33 @@
+<header class="page-header">
+  <div class="row">
+    <div class="col-xs-8">
+      <h2>Recreation room<small>List of People</small></h2>
+    </div>
+    <div class="col-xs-4 page-header-actions">
+      <button class="btn btn-default">Add person</button>
+    </div>
+  </div>
+</header>
+<table class="table table-striped">
+  <thead class="thead">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Height</th>
+      <th>Mass</th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+    <tr *ngFor="let person of people$ | async; let i = index;">
+      <td>{{  1 + i }}</td>
+      <td>{{ person.name}}</td>
+      <td>{{ person.height }}</td>
+      <td>{{ person.mass }}</td>
+      <td>
+        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
