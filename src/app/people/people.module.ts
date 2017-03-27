@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'
 
 import { PeopleComponent } from './people.component';
-import peopleRoutes from './people.routes';
+import { peopleRoutes } from './people.routes';
 
 @NgModule({
   declarations: [ PeopleComponent ],
@@ -11,4 +11,4 @@ import peopleRoutes from './people.routes';
   exports: [],
   providers: [ PeopleService ],
 })
-export default class PeopleModule {}
+export class PeopleModule {}

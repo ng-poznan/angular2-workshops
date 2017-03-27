@@ -4,8 +4,8 @@ import { PlanetsComponent } from './planets/planets.component';
 
 const routes: Routes = [
   { path: '', children: [] },
-  { path: 'people', loadChildren: 'app/people/people.module' },
+  { path: 'people', loadChildren: 'app/people/people.module#PeopleModule' },
   { path: 'planets', component: PlanetsComponent}
 ];
 
-export default RouterModule.forRoot(routes);
+export const appRoutes = RouterModule.forRoot(routes);

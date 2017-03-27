@@ -5,4 +5,4 @@ const routes: Routes = [
   { path: '', component: PeopleComponent }
 ];
 
-export default RouterModule.forChild(routes);
+export const peopleRoutes = RouterModule.forChild(routes);
