@@ -5,7 +5,7 @@ import { PlanetsComponent } from './planets.component';
 
 @NgModule({
   declarations: [ PlanetsComponent ],
-  imports:  [ CommonModule ],
+  imports: [ CommonModule ],
   exports: [],
   providers: [],
 })

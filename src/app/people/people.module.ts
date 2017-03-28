@@ -7,7 +7,7 @@ import { peopleRoutes } from './people.routes';
 
 @NgModule({
   declarations: [ PeopleComponent ],
-  imports:  [ peopleRoutes, CommonModule ],
+  imports: [ peopleRoutes, CommonModule ],
   exports: [],
   providers: [ PeopleService ],
 })

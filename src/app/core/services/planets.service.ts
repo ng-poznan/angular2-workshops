@@ -8,16 +8,14 @@ import { API_URL } from '../tokens/core.tokens';
 
 @Injectable()
 export class PlanetsService {
-  constructor(private http: Http, @Inject(API_URL) private apiUrl) {}
+  constructor(
+    @Inject(API_URL) private apiUrl,
+    private http: Http
+  ) { }
 
-  public getPlanets(page : string | number = 1): Observable<any[]> {
+  public getPlanets(page: number = 1): Observable<any[]> {
     return this.http.get(`${this.apiUrl}/planets?page=${page}`)
       .map((res : Response) => res.json())
       .map(({ results }: any) => results);
-  }
-
-  public getPlanet(id : string | number): Observable<any> {
-    return this.http.get(`${this.apiUrl}/planets/${id}/`)
-      .map((res : Response) => res.json());
   }
 }
