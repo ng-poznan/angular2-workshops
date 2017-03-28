@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/';
 
 import { PlanetsService } from './../core/services/planets.service';
 
@@ -9,7 +9,7 @@ import { PlanetsService } from './../core/services/planets.service';
   styleUrls: ['./planets.component.scss']
 })
 export class PlanetsComponent implements OnInit {
-  public planet$ : Observable<any[]>;
+  public planet$: Observable<any[]>;
 
   constructor(private planetsServ: PlanetsService) {}
 

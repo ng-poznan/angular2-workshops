@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { Http } from '@angular/http';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject } from 'rxjs/';
 
 import { PlanetsService } from './planets.service';
 import { API_URL } from './../tokens/core.tokens';
@@ -15,7 +15,7 @@ describe('UsersService', () => {
 
   const responsePage2 = {
     results: [ { id: 3 }, { id: 4 } ]
-  }
+  };
 
   const HttpStub = {
     get() {}
@@ -49,7 +49,7 @@ describe('UsersService', () => {
       beforeEach(() => {
         request$ = service.getPlanets();
         response$.next({ json: () => responsePage1 });
-      })
+      });
 
       it('calls the get method on the Http service with the default page number set to 1:', () => {
         expect(HttpStub.get).toHaveBeenCalledWith(`www.fake-url.com/planets?page=1`);
@@ -70,7 +70,7 @@ describe('UsersService', () => {
       beforeEach(() => {
         request$ = service.getPlanets(2);
         response$.next({ json: () => responsePage2 });
-      })
+      });
 
       it('calls the get method on the Http service:', () => {
         expect(HttpStub.get).toHaveBeenCalledWith(`www.fake-url.com/planets?page=2`);
@@ -82,6 +82,7 @@ describe('UsersService', () => {
           done();
         });
       });
+
     });
 
   });

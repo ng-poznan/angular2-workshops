@@ -13,9 +13,9 @@ export class PlanetsService {
     private http: Http
   ) { }
 
-  public getPlanets(page: number = 1): Observable<any[]> {
+  public getPlanets(page = 1): Observable<any[]> {
     return this.http.get(`${this.apiUrl}/planets?page=${page}`)
-      .map((res : Response) => res.json())
+      .map((res: Response) => res.json())
       .map(({ results }: any) => results);
   }
 }

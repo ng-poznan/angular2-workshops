@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/';
 
 import { PeopleService } from './people.service';
 import { MissingMapService } from './../core/services/missing-map.service';
@@ -10,7 +10,7 @@ import { MissingMapService } from './../core/services/missing-map.service';
   styleUrls: ['./people.component.scss']
 })
 export class PeopleComponent implements OnInit {
-  public people$ : Observable<any[]>;
+  public people$: Observable<any[]>;
 
   constructor(private peopleServ: PeopleService, private missingMapServ: MissingMapService) {}
 
