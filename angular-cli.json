@@ -1,6 +1,6 @@
 {
   "project": {
-    "version": "1.0.0-beta.28.3",
+    "version": "1.0.0",
     "name": "angular2-workshops"
   },
   "apps": [
@@ -23,7 +23,8 @@
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
-      "environments":{
+
+      "environments": {
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
