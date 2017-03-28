@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlanetsComponent } from './planets.component';
+import { PlanetsService } from './../core/services/planets.service';
 
 describe('PlanetsComponent', () => {
   let component: PlanetsComponent;
@@ -8,7 +9,10 @@ describe('PlanetsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PlanetsComponent ]
+      declarations: [ PlanetsComponent ],
+      providers: [
+        { provide: PlanetsService, useValue: { getPlanets() {} } }
+      ]
     })
     .compileComponents();
   }));
@@ -20,6 +24,6 @@ describe('PlanetsComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 });
