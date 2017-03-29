@@ -4,18 +4,15 @@ import { Http, Response } from '@angular/http';
 import { Observable } from 'rxjs/';
 import 'rxjs/add/operator/map';
 
+import { API_URL } from './../core/tokens/core.tokens';
+
 @Injectable()
 export class PeopleService {
 
-  public people = Observable.of([
-    { name: 'Person A', height: '250', mass: '180' },
-    { name: 'Person B', height: '25', mass: '18' },
-    { name: 'Person C', height: '150', mass: '100' }
-  ]);
-
-  private apiUrl = 'http://swapi.co/api';
-
-  constructor(private http: Http) { }
+  constructor(
+    private http: Http,
+    @Inject(API_URL) private apiUrl
+  ) { }
 
   public getPeople(page = 1): Observable<any[]> {
     return this.http.get(`${this.apiUrl}/people?page=${page}`)
