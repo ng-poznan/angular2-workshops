@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { CoreModule } from './core/core.module';
 import { appRoutes } from './app.routes';
 import { AppComponent } from './app.component';
 import { PlanetsModule } from './planets/planets.module';
@@ -14,6 +15,7 @@ import { PlanetsModule } from './planets/planets.module';
     FormsModule,
     HttpModule,
     appRoutes,
+    CoreModule,
     PlanetsModule
   ],
   providers: [],

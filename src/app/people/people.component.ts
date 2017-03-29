@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/';
 
+import { PeopleService } from './people.service';
+
 @Component({
   selector: 'ds-people',
   templateUrl: './people.component.html',
@@ -10,14 +12,10 @@ export class PeopleComponent implements OnInit {
 
   public people$: Observable<any[]>;
 
-  constructor() { }
+  constructor(private peopleServ: PeopleService) { }
 
   ngOnInit() {
-    this.people$ = Observable.of([
-      { name: 'Person A', height: '250', mass: '180' },
-      { name: 'Person B', height: '25', mass: '18' },
-      { name: 'Person C', height: '150', mass: '100' }
-    ]);
+    this.people$ = this.peopleServ.getPeople();
   }
 
 }
