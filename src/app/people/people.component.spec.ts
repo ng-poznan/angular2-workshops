@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PeopleComponent } from './people.component';
+import { PeopleService } from './people.service';
+import { MissingMapService } from './../core/services/missing-map.service';
 
 describe('PeopleComponent', () => {
   let component: PeopleComponent;
@@ -9,7 +11,16 @@ describe('PeopleComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ PeopleComponent ],
-      providers: []
+      providers: [
+        {
+          provide: PeopleService,
+          useValue: { getPeople() {} }
+        },
+        {
+          provide: MissingMapService,
+          useValue: { askForMissingPiece() { return 'I dunno...'; } }
+        },
+      ]
     })
     .compileComponents();
   }));
