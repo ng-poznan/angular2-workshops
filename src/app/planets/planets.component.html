@@ -1,0 +1,35 @@
+<header class="page-header">
+  <div class="row">
+    <div class="col-xs-8">
+      <h2>Planetary System<small>List of Planets</small></h2>
+    </div>
+    <div class="col-xs-4 page-header-actions">
+      <button class="btn btn-default">Add planet</button>
+    </div>
+  </div>
+</header>
+<table class="table table-striped">
+  <thead class="thead">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Gravity</th>
+      <th>Population</th>
+      <th>Diameter</th>
+      <th class="actions">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="tbody">
+    <tr *ngFor="let planet of planet$ | async; let i = index;">
+      <td>{{  1 + i }}</td>
+      <td>{{ planet.name}}</td>
+      <td>{{ planet.gravity }}</td>
+      <td>{{ planet.population }}</td>
+      <td>{{ planet.diameter }}</td>
+      <td>
+        <button class="btn btn-primary">Edit</button>
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
