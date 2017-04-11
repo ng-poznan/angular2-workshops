@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { Routes } from '@angular/router';
+import { CoreModule } from './core/core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { TurboliftModule } from './turbolift/turbolift.module';
 import { MessHallModule } from './mess-hall/mess-hall.module';
@@ -20,6 +21,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    CoreModule,
     AppRoutingModule,
     TurboliftModule,
     MessHallModule,

@@ -1,0 +1,15 @@
+ul {
+  display: inline-block;
+  margin-top: 20px;
+
+  li {
+    float: left;
+    list-style: none;
+    width: 200px;
+    height: 150px;
+
+    img {
+      width: 100px;
+    }
+  }
+}
