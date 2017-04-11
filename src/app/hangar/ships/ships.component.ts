@@ -21,8 +21,6 @@ export class ShipsComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.ships = this.route.params
-      .pluck('type')
-      .mergeMap(type => this.shipsServ.getShips(type));
+    this.ships = this.route.data.pluck('ships');
   }
 }

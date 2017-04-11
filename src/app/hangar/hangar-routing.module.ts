@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HangarComponent } from './hangar.component';
 import { ShipsComponent } from './ships/ships.component';
+import { ShipsResolver } from '../core/resolvers/ships-resolver.service';
 
 const hangarRoutes: Routes = [
   {
@@ -10,11 +11,17 @@ const hangarRoutes: Routes = [
     children: [
       {
         path: 'ships',
-        component: ShipsComponent
+        component: ShipsComponent,
+        resolve: {
+          ships: ShipsResolver
+        }
       },
       {
         path: 'ships/:type',
-        component: ShipsComponent
+        component: ShipsComponent,
+        resolve: {
+          ships: ShipsResolver
+        }
       }
     ]
   }
