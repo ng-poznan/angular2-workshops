@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let ship of ships | async">
+    <img [src]="ship.image" alt="ship">
+    <p>TIE {{ ship.type }} {{ ship.id }}</p>
+  </li>
+</ul>
