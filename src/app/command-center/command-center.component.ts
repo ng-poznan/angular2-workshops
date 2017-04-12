@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { AuthorizationService } from '../core/services/authorization.service';
 
 @Component({
   selector: 'ds-command-center',
@@ -10,7 +11,10 @@ export class CommandCenterComponent implements OnInit {
   private controlPanelOpen: boolean;
   private buttonText: string;
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private authService: AuthorizationService) {
   }
 
   ngOnInit() {
@@ -26,5 +30,9 @@ export class CommandCenterComponent implements OnInit {
     this.controlPanelOpen ?
       this.router.navigate(['command-center']) :
       this.router.navigate(['control-panel'], {relativeTo: this.route});
+  }
+
+  public authorizeVader() {
+    this.authService.toggleAuthorization()
   }
 }
