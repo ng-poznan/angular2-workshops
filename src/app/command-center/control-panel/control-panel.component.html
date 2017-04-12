@@ -1,3 +1,4 @@
-<button (click)="destroyAlderaan()" title="Destroy Alderaan" class="menu-link">
+<button *ngIf="!alderaanDestroyed" (click)="destroyAlderaan()" title="Destroy Alderaan" class="menu-link">
   <h2>Destroy Alderaan</h2>
 </button>
+<img *ngIf="alderaanDestroyed" src="./assets/images/destroy_alderaan.jpg" alt="Destroyed Alderaan" class="img-thumbnail img-fill-col" />

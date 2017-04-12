@@ -11,6 +11,10 @@
       <img src="./assets/images/command-center.jpg" alt="Cmmand center" class="img-thumbnail img-fill-col" />
     </div>
     <div class="col-xs-6">
+      <div>
+        <label for="authorization">I am Lord Vader</label>
+        <input type="checkbox" name="authorization" id="authorization" (click)="authorizeVader()">
+      </div>
       <button (click)="toggleControlPanel()">{{ buttonText }}</button>
       <router-outlet></router-outlet>
     </div>
