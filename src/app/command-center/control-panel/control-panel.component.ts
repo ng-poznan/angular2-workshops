@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./control-panel.component.scss']
 })
 export class ControlPanelComponent implements OnInit {
+  private alderaanDestroyed = false;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  public destroyAlderaan() {
+    this.alderaanDestroyed = true;
   }
 
 }
