@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'ds-command-center',
@@ -6,10 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./command-center.component.scss']
 })
 export class CommandCenterComponent implements OnInit {
+  private controlPanelOpen: boolean;
+  private buttonText: string;
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private router: Router, private route: ActivatedRoute) {
   }
 
+  ngOnInit() {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.controlPanelOpen = event.url === '/command-center/control-panel';
+        this.buttonText = this.controlPanelOpen ? 'Close control panel' : 'Open control panel';
+      }
+    });
+  }
+
+  public toggleControlPanel() {
+    this.controlPanelOpen ?
+      this.router.navigate(['command-center']) :
+      this.router.navigate(['control-panel'], {relativeTo: this.route});
+  }
 }
