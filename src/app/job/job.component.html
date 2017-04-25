@@ -1,0 +1,131 @@
+<section class="form">
+  <header class="page-header">
+    <div class="row">
+      <div class="col-xs-8">
+        <h2>Job<small>form</small></h2>
+      </div>
+    </div>
+  </header>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title">Build and protect the Death Star with us</h3>
+    </div>
+    <div class="panel-body">
+      <form>
+        <div class="row">
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="firstname">Email address</label>
+              <input type="text" class="form-control" id="firstname" placeholder="First name">
+            </div>
+
+            <div class="form-group">
+              <label for="lastname">Email address</label>
+              <input type="lastname" class="form-control" id="lastname" placeholder="Last name">
+            </div>
+
+            <div class="form-group">
+              <label for="species">Select species</label>
+              <select id="species" class="form-control">
+                <option value="0">Select your species</option>
+                <option
+                  *ngFor="let item of source.species"
+                  [value]="item.value"
+                >
+                  {{ item.label }}
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="jobs">Select job</label>
+              <select id="jobs" class="form-control">
+                <option value="0">Select job</option>
+                <option
+                  *ngFor="let item of source.jobs"
+                  [value]="item.value"
+                >
+                  {{ item.label }}
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="power">Select your Jedi power</label>
+              <select id="power" class="form-control">
+                <option value="0">Select your power</option>
+                <option
+                  *ngFor="let item of source.powers"
+                  [value]="item.value"
+                >
+                  {{ item.label }}
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="weapon">Select your favorite weapon</label>
+              <select id="weapon" class="form-control">
+                <option value="0">Select your favorite weapon</option>
+                <option
+                  *ngFor="let item of source.weapons"
+                  [value]="item.value"
+                >
+                  {{ item.label }}
+                </option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="ship">Select your favorite ship</label>
+              <select id="ship" class="form-control">
+                <option value="0">Select your favorite ship</option>
+                <option
+                  *ngFor="let item of source.ships"
+                  [value]="item.value"
+                >
+                  {{ item.label }}
+                </option>
+              </select>
+            </div>
+          </div>
+
+          <div class="col-xs-6">
+            <div class="form-group">
+              <label for="description">Description</label>
+              <textarea class="form-control" rows="10" id="description"></textarea>
+            </div>
+
+            <div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="ownShip" value="true">
+                  I have starship
+                </label>
+              </div>
+
+              <div class="radio">
+                <label>
+                  <input type="radio" name="ownShip" value="true">
+                  I don't have starship
+                </label>
+              </div>
+            </div>
+
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="true">
+                I agree to the processing of personal data in order to send marketing messages by Imperial
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <button type="submit" class="btn btn-success">Send application</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
