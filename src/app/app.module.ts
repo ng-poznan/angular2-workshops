@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
+import { JobModule } from './job/job.module';
 
 @NgModule({
   declarations: [
@@ -12,9 +13,9 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    JobModule
   ],
   providers: [],
   bootstrap: [AppComponent]

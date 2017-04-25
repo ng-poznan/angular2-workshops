@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { JobComponent } from './job/job.component';
 
 const routes: Routes = [
   {
     path: '',
     children: []
+  },
+  {
+    path: 'job',
+    component: JobComponent
   }
 ];
 
