@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { source } from './data/source';
-import { AbstractControl, FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { CustomValidators } from './validators/validators';
 
 @Component({
   selector: 'ds-careers',
@@ -24,6 +25,13 @@ export class JobComponent implements OnInit {
     this.switchDisableField(this.form.get('job'), this.form.get('weapon'), '1');
     this.switchDisableField(this.form.get('job'), this.form.get('ship'), '2');
     this.switchDisableField(this.form.get('job'), this.form.get(['agreements', 'ownShip']), '2');
+
+    this.form.get('job').valueChanges.subscribe((value) => {
+      const description: FormControl = this.form.get('description') as FormControl;
+      value === '0' ? description.setValidators(CustomValidators.required) : description.clearValidators();
+
+      description.updateValueAndValidity();
+    });
   }
 
   public switchDisableField(
@@ -36,19 +44,23 @@ export class JobComponent implements OnInit {
     });
   }
 
+  public toArray(object: any): any {
+    return !!object ? Object.keys(object).reduce((acc, key, index) => acc.concat(object[key]), []) : [];
+  }
+
   public getForm(): FormGroup {
     return this.fb.group({
-      firstname: [ '' ],
-      lastname: [ '' ],
-      species: [ '' ],
-      job: [ '' ],
-      power: [ { value: '', disabled: true } ],
-      weapon: [ { value: '', disabled: true } ],
-      ship: [ { value: '', disabled: true } ],
+      firstname: [ '', [ CustomValidators.required ] ],
+      lastname: [ '', [ CustomValidators.required ] ],
+      species: [ '', [ CustomValidators.required ] ],
+      job: [ '', [ CustomValidators.required ] ],
+      power: [ { value: '', disabled: true }, [ CustomValidators.required ] ],
+      weapon: [ { value: '', disabled: true }, [ CustomValidators.required ] ],
+      ship: [ { value: '', disabled: true }, [ CustomValidators.required ] ],
       description: [ '' ],
       agreements: this.fb.group({
-        ownShip: [ { value: false, disabled: true } ],
-        newsletter: [ false ]
+        ownShip: [ { value: false, disabled: true }, [ CustomValidators.required ] ],
+        newsletter: [ false, [ CustomValidators.newsletter ] ]
       })
     });
   }

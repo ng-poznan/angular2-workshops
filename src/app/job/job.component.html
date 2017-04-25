@@ -25,6 +25,15 @@
               >
             </div>
 
+            <div *ngIf="form.get('firstname').dirty">
+              <div
+                *ngFor="let error of toArray(form.get('firstname').errors)"
+                class="alert alert-danger"
+              >
+                {{ error }}
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="lastname">Email address</label>
               <input
@@ -34,6 +43,15 @@
                 placeholder="Last name"
                 formControlName="lastname"
               >
+            </div>
+
+            <div *ngIf="form.get('lastname').dirty">
+              <div
+                *ngFor="let error of toArray(form.get('lastname').errors)"
+                class="alert alert-danger"
+              >
+                {{ error }}
+              </div>
             </div>
 
             <div class="form-group">
@@ -49,6 +67,15 @@
               </select>
             </div>
 
+            <div *ngIf="form.get('species').dirty">
+              <div
+                *ngFor="let error of toArray(form.get('species').errors)"
+                class="alert alert-danger"
+              >
+                {{ error }}
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="job">Select job</label>
               <select id="job" class="form-control" formControlName="job">
@@ -60,6 +87,15 @@
                   {{ item.label }}
                 </option>
               </select>
+            </div>
+
+            <div *ngIf="form.get('job').dirty">
+              <div
+                *ngFor="let error of toArray(form.get('job').errors)"
+                class="alert alert-danger"
+              >
+                {{ error }}
+              </div>
             </div>
 
             <div class="form-group">
@@ -75,6 +111,15 @@
               </select>
             </div>
 
+            <div *ngIf="form.get('power').dirty">
+              <div
+                *ngFor="let error of toArray(form.get('power').errors)"
+                class="alert alert-danger"
+              >
+                {{ error }}
+              </div>
+            </div>
+
             <div class="form-group">
               <label for="weapon">Select your favorite weapon</label>
               <select id="weapon" class="form-control" formControlName="weapon">
@@ -86,6 +131,15 @@
                   {{ item.label }}
                 </option>
               </select>
+            </div>
+
+            <div *ngIf="form.get('weapon').dirty">
+              <div
+                *ngFor="let error of toArray(form.get('weapon').errors)"
+                class="alert alert-danger"
+              >
+                {{ error }}
+              </div>
             </div>
 
             <div class="form-group">
@@ -102,10 +156,28 @@
             </div>
           </div>
 
+          <div *ngIf="form.get('ship').dirty">
+            <div
+              *ngFor="let error of toArray(form.get('ship').errors)"
+              class="alert alert-danger"
+            >
+              {{ error }}
+            </div>
+          </div>
+
           <div class="col-xs-6">
             <div class="form-group">
               <label for="description">Description</label>
               <textarea class="form-control" rows="10" id="description" formControlName="description"></textarea>
+            </div>
+
+            <div>
+              <div
+                *ngFor="let error of toArray(form.get('description').errors)"
+                class="alert alert-danger"
+              >
+                {{ error }}
+              </div>
             </div>
 
             <div formGroupName="agreements">
@@ -123,18 +195,44 @@
                 </label>
               </div>
 
+              <div *ngIf="form.get(['agreements', 'ownShip']).dirty">
+                <div
+                  *ngFor="let error of toArray(form.get(['agreements', 'ownShip']).errors)"
+                  class="alert alert-danger"
+                >
+                  {{ error }}
+                </div>
+              </div>
+
               <div class="checkbox">
                 <label>
                   <input type="checkbox" [value]="true" formControlName="newsletter">
                   I agree to the processing of personal data in order to send marketing messages by Imperial
                 </label>
+
+                <div *ngIf="form.get(['agreements', 'newsletter']).dirty">
+                  <div
+                    *ngFor="let error of toArray(form.get(['agreements', 'newsletter']).errors)"
+                    class="alert alert-danger"
+                  >
+                    {{ error }}
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <button class="btn btn-success" (click)="sendApplication(form)">Send application</button>
+            <button
+              class="btn btn-success"
+              (click)="sendApplication(form)"
+              [disabled]="!form.valid"
+            >
+              Send application
+            </button>
+
             <button class="btn btn-danger" (click)="reset(form)">Reset</button>
             <button class="btn btn-primary" (click)="setValues(form)">Set value</button>
           </div>
