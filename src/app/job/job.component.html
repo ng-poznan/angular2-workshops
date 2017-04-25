@@ -15,19 +15,29 @@
         <div class="row">
           <div class="col-xs-6">
             <div class="form-group">
-              <label for="firstname">Email address</label>
-              <input type="text" class="form-control" id="firstname" placeholder="First name">
+              <label for="firstname">First name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstname"
+                placeholder="First name"
+              >
             </div>
 
             <div class="form-group">
-              <label for="lastname">Email address</label>
-              <input type="lastname" class="form-control" id="lastname" placeholder="Last name">
+              <label for="lastname">Last name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastname"
+                placeholder="Last name"
+              >
             </div>
 
             <div class="form-group">
               <label for="species">Select species</label>
               <select id="species" class="form-control">
-                <option value="0">Select your species</option>
+                <option value="">Select your species</option>
                 <option
                   *ngFor="let item of source.species"
                   [value]="item.value"
@@ -38,9 +48,9 @@
             </div>
 
             <div class="form-group">
-              <label for="jobs">Select job</label>
-              <select id="jobs" class="form-control">
-                <option value="0">Select job</option>
+              <label for="job">Select job</label>
+              <select id="job" class="form-control">
+                <option value="">Select job</option>
                 <option
                   *ngFor="let item of source.jobs"
                   [value]="item.value"
@@ -53,7 +63,7 @@
             <div class="form-group">
               <label for="power">Select your Jedi power</label>
               <select id="power" class="form-control">
-                <option value="0">Select your power</option>
+                <option value="">Select your power</option>
                 <option
                   *ngFor="let item of source.powers"
                   [value]="item.value"
@@ -66,7 +76,7 @@
             <div class="form-group">
               <label for="weapon">Select your favorite weapon</label>
               <select id="weapon" class="form-control">
-                <option value="0">Select your favorite weapon</option>
+                <option value="">Select your favorite weapon</option>
                 <option
                   *ngFor="let item of source.weapons"
                   [value]="item.value"
@@ -79,7 +89,7 @@
             <div class="form-group">
               <label for="ship">Select your favorite ship</label>
               <select id="ship" class="form-control">
-                <option value="0">Select your favorite ship</option>
+                <option value="">Select your favorite ship</option>
                 <option
                   *ngFor="let item of source.ships"
                   [value]="item.value"
@@ -99,30 +109,32 @@
             <div>
               <div class="radio">
                 <label>
-                  <input type="radio" name="ownShip" value="true">
+                  <input type="radio" name="ownShip" [value]="true">
                   I have starship
                 </label>
               </div>
 
               <div class="radio">
                 <label>
-                  <input type="radio" name="ownShip" value="true">
+                  <input type="radio" name="ownShip" [value]="false">
                   I don't have starship
                 </label>
               </div>
-            </div>
 
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" value="true">
-                I agree to the processing of personal data in order to send marketing messages by Imperial
-              </label>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" [value]="true">
+                  I agree to the processing of personal data in order to send marketing messages by Imperial
+                </label>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
-            <button type="submit" class="btn btn-success">Send application</button>
+            <button class="btn btn-success">Send application</button>
+            <button class="btn btn-danger">Reset</button>
+            <button class="btn btn-primary">Set value</button>
           </div>
         </div>
       </form>
