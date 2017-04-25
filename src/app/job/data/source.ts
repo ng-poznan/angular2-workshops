@@ -7,8 +7,9 @@ export const source = {
   jobs: [
     { value: 0, label: 'Jedi' },
     { value: 1, label: 'Trooper' },
-    { value: 2, label: 'Mechanic' },
-    { value: 3, label: 'Worker' }
+    { value: 2, label: 'Pilot' },
+    { value: 3, label: 'Mechanic' },
+    { value: 4, label: 'Worker' }
   ],
 
   weapons: [
