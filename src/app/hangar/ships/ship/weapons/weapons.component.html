@@ -5,10 +5,15 @@
   </div>
 </div>
 
-<ds-weapon></ds-weapon>
+<ds-weapon
+  *ngFor="let weapon of weapons.controls; let i = index"
+  [weapon]="weapon"
+  [index]="i"
+  (remove)="removeWeapon(weapons, $event)"
+></ds-weapon>
 
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-primary btn-block">Add weapon</button>
+    <button class="btn btn-primary btn-block" (click)="addWeapon(weapons)">Add weapon</button>
   </div>
 </div>

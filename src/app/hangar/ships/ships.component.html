@@ -1,7 +1,7 @@
-<ds-ship></ds-ship>
+<ds-ship *ngFor="let ship of ships.controls" [ship]="ship"></ds-ship>
 
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-primary btn-block">Add ship</button>
+    <button class="btn btn-primary btn-block" (click)="addShip(ships)">Add ship</button>
   </div>
 </div>

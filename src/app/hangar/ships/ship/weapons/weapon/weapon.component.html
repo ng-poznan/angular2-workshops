@@ -2,25 +2,25 @@
   <div class="col-xs-4">
     <div class="form-group">
       <label>Name</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" [formControl]="name">
     </div>
   </div>
   <div class="col-xs-3">
     <div class="form-group">
       <label>Power</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" [formControl]="power">
     </div>
   </div>
   <div class="col-xs-3">
     <div class="form-group">
       <label>Weight</label>
-      <input type="text" class="form-control">
+      <input type="text" class="form-control" [formControl]="weight">
     </div>
   </div>
   <div class="col-xs-2">
     <div class="form-group">
       <label>&nbsp;</label>
-      <button class="btn btn-danger btn-block">Remove</button>
+      <button class="btn btn-danger btn-block" (click)="removeWeapon(index)">Remove</button>
     </div>
   </div>
 </div>

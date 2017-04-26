@@ -7,8 +7,8 @@
     </div>
   </header>
 
-  <form>
-    <ds-ships></ds-ships>
+  <form [formGroup]="hangar">
+    <ds-ships [ships]="ships"></ds-ships>
 
     <div class="row">
       <div class="col-xs-12 text-center">
