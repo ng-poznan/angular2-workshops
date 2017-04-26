@@ -33,4 +33,8 @@ export class HangarComponent implements OnInit {
       });
   }
 
+  public save(hangar: FormGroup): void {
+    console.log(hangar.value);
+  }
+
 }
