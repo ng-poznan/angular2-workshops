@@ -13,7 +13,8 @@
     <div class="stormtrooper-container" *ngFor="let stormtrooper of stormtroopers">
       <ds-stormtrooper [stormtrooper]="stormtrooper"></ds-stormtrooper>
     </div>
-    <button (click)="changeColor()">Change color</button>
-    <button (click)="changeName()">Change name</button>
+    <button class="btn btn-secondary" (click)="changeColor()">Change color</button>
+    <input type="text" placeholder="Type name here" [(ngModel)]="name">
+    <button class="btn btn-secondary" (click)="changeName()">Change name</button>
   </div>
 </section>

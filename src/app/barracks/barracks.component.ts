@@ -38,13 +38,14 @@ export class BarracksComponent implements OnChanges, DoCheck {
       rank: 'Sgt.',
     }
   }];
+  public name: string;
 
   changeColor() {
     this.stormtroopers[4].badge = Object.assign({}, this.stormtroopers[4].badge, { color: 'green' });
   }
 
   changeName() {
-    this.stormtroopers[4].name = 'New name';
+    this.stormtroopers[4].name = this.name;
   }
 
   ngOnChanges(changes) {
