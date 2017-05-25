@@ -1,6 +1,7 @@
 # Angular2Workshops - Components part1
 
 Presentation: [Live](https://glacial-sierra-70854.herokuapp.com/#/) 
+Branch: components-part2
 
 # Angular2Workshops
 
