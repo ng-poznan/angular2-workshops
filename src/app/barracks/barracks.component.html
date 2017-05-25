@@ -1,0 +1,19 @@
+<section class="details">
+  <header class="page-header">
+    <div class="row">
+      <div class="col-xs-8">
+        <h2>Barracks</h2>
+      </div>
+    </div>
+  </header>
+  <div class="row">
+    <div class="jango-container">
+      <ds-jango class="jango"></ds-jango>
+    </div>
+    <div class="stormtrooper-container" *ngFor="let stormtrooper of stormtroopers">
+      <ds-stormtrooper [stormtrooper]="stormtrooper"></ds-stormtrooper>
+    </div>
+    <button (click)="changeColor()">Change color</button>
+    <button (click)="changeName()">Change name</button>
+  </div>
+</section>

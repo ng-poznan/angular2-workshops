@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CommandCenterComponent } from './command-center.component';
 
-describe('CommandCenterComponent', () => {
+xdescribe('CommandCenterComponent', () => {
   let component: CommandCenterComponent;
   let fixture: ComponentFixture<CommandCenterComponent>;
 

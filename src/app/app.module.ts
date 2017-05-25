@@ -12,10 +12,11 @@ import { HangarModule } from './hangar/hangar.module';
 import { CommandCenterModule } from './command-center/command-center.module';
 
 import { AppComponent } from './app.component';
+import { BarracksModule } from './barracks/barracks.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +29,8 @@ import { AppComponent } from './app.component';
     MessHallModule,
     LivingQuartersModule,
     HangarModule,
-    CommandCenterModule
+    CommandCenterModule,
+    BarracksModule
   ],
   providers: [],
   bootstrap: [AppComponent]
