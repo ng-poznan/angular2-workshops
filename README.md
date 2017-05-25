@@ -1,7 +1,6 @@
 # Angular2Workshops - Components part1
 
-Presentation: [Live](http://desolate-brook-67741.herokuapp.com/) 
-Tasks: [Google Documents](https://docs.google.com/document/d/185kezzhO0t_JMhqmM50pTlY7mxi0PZqmHjewKXJ5O0c/edit?usp=sharing) 
+Presentation: [Live](https://glacial-sierra-70854.herokuapp.com/#/) 
 
 # Angular2Workshops
 
